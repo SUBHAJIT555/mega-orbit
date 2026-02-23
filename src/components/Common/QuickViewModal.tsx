@@ -102,7 +102,7 @@ const QuickViewModal = () => {
         {[...Array(emptyStars)].map((_, i) => (
           <svg
             key={`empty-${i}`}
-            className="fill-gray-4"
+            className="fill-[var(--brutal-black)]/30"
             width="18"
             height="18"
             viewBox="0 0 18 18"
@@ -167,14 +167,14 @@ const QuickViewModal = () => {
   return (
     <div
       className={`${isModalOpen ? "z-99999" : "hidden"
-        } fixed top-0 left-0 overflow-y-auto no-scrollbar w-full h-screen sm:py-20 xl:py-25 2xl:py-[230px] bg-dark/70 sm:px-8 px-4 py-5`}
+        } fixed top-0 left-0 overflow-y-auto no-scrollbar w-full h-screen sm:py-20 xl:py-25 2xl:py-[230px] bg-[var(--brutal-black)]/70 sm:px-8 px-4 py-5`}
     >
       <div className="flex items-center justify-center ">
-        <div className="w-full max-w-[1100px] rounded-xl shadow-3 bg-white p-7.5 relative modal-content">
+        <div className="w-full max-w-[1100px] rounded-none border-[3px] border-[var(--brutal-black)] brutal-box bg-white p-7.5 relative modal-content">
           <button
             onClick={handleCloseModal}
             aria-label="button for close modal"
-            className="absolute top-0 right-0 sm:top-6 sm:right-6 flex items-center justify-center w-10 h-10 rounded-full ease-in duration-150 bg-meta text-body hover:text-dark"
+            className="absolute top-0 right-0 sm:top-6 sm:right-6 flex items-center justify-center w-10 h-10 rounded-none border-2 border-[var(--brutal-black)] bg-[var(--brutal-yellow)] text-[var(--brutal-black)] ease-in duration-150 hover:bg-[var(--brutal-cyan)]"
           >
             <svg
               className="fill-current"
@@ -196,12 +196,12 @@ const QuickViewModal = () => {
           <div className="flex flex-wrap items-center gap-12.5">
             <div className="max-w-[526px] w-full">
               <div className="flex gap-5">
-                <div className="relative z-1 overflow-hidden flex items-center justify-center w-full sm:min-h-[508px] bg-gray-1 rounded-lg border border-gray-3">
+                <div className="relative z-1 overflow-hidden flex items-center justify-center w-full sm:min-h-[508px] bg-[var(--brutal-bg)] rounded-none border-2 border-[var(--brutal-black)]">
                   <div>
                     <button
                       onClick={handlePreviewSlider}
                       aria-label="button for zoom"
-                      className="gallery__Image w-10 h-10 rounded-[5px] bg-white shadow-1 flex items-center justify-center ease-out duration-200 text-dark hover:text-blue absolute top-4 lg:top-8 right-4 lg:right-8 z-50"
+                      className="gallery__Image w-10 h-10 rounded-none border-2 border-[var(--brutal-black)] bg-white brutal-btn flex items-center justify-center ease-out duration-200 text-[var(--brutal-black)] hover:bg-[var(--brutal-cyan)] absolute top-4 lg:top-8 right-4 lg:right-8 z-50"
                     >
                       <svg
                         className="fill-current"
@@ -235,27 +235,27 @@ const QuickViewModal = () => {
 
             <div className="max-w-[445px] w-full">
               {product.isNewArrival && (
-                <span className="inline-block text-custom-xs font-medium text-white py-1 px-3 bg-green mb-6.5 mr-2">
+                <span className="inline-block text-custom-xs font-black text-[var(--brutal-black)] py-1 px-3 border-2 border-[var(--brutal-black)] bg-[var(--brutal-cyan)] mb-6.5 mr-2">
                   NEW ARRIVAL
                 </span>
               )}
               {product.isBestSelling && (
-                <span className="inline-block text-custom-xs font-medium text-white py-1 px-3 bg-blue mb-6.5 mr-2">
+                <span className="inline-block text-custom-xs font-black text-[var(--brutal-black)] py-1 px-3 border-2 border-[var(--brutal-black)] bg-[var(--brutal-yellow)] mb-6.5 mr-2">
                   BEST SELLING
                 </span>
               )}
               {product.isTrending && (
-                <span className="inline-block text-custom-xs font-medium text-white py-1 px-3 bg-orange-500 mb-6.5 mr-2">
+                <span className="inline-block text-custom-xs font-black text-[var(--brutal-black)] py-1 px-3 border-2 border-[var(--brutal-black)] bg-[var(--brutal-cyan)] mb-6.5 mr-2">
                   TRENDING
                 </span>
               )}
               {discountPercentage > 0 && !product.isNewArrival && !product.isBestSelling && !product.isTrending && (
-                <span className="inline-block text-custom-xs font-medium text-white py-1 px-3 bg-green mb-6.5">
+                <span className="inline-block text-custom-xs font-black text-[var(--brutal-black)] py-1 px-3 border-2 border-[var(--brutal-black)] bg-[var(--brutal-yellow)] mb-6.5">
                   SALE {discountPercentage}% OFF
                 </span>
               )}
 
-              <h3 className="font-semibold text-xl xl:text-heading-5 text-dark mb-4">
+              <h3 className="font-black text-xl xl:text-heading-5 text-[var(--brutal-black)] uppercase tracking-tight mb-4">
                 {product.title}
               </h3>
 
@@ -266,8 +266,8 @@ const QuickViewModal = () => {
                   </div>
 
                   <span>
-                    <span className="font-medium text-dark"> {product.rating?.toFixed(1) || '4.7'} Rating </span>
-                    <span className="text-dark-2"> ({product.reviews || 0} reviews) </span>
+                    <span className="font-bold text-[var(--brutal-black)]"> {product.rating?.toFixed(1) || '4.7'} Rating </span>
+                    <span className="text-[var(--brutal-black)]/70 font-medium"> ({product.reviews || 0} reviews) </span>
                   </span>
                 </div>
 
@@ -297,7 +297,7 @@ const QuickViewModal = () => {
                           </clipPath>
                         </defs>
                       </svg>
-                      <span className="font-medium text-dark"> In Stock </span>
+                      <span className="font-bold text-[var(--brutal-black)]"> In Stock </span>
                     </>
                   ) : (
                     <>
@@ -324,34 +324,34 @@ const QuickViewModal = () => {
                           </clipPath>
                         </defs>
                       </svg>
-                      <span className="font-medium text-dark"> Out of Stock </span>
+                      <span className="font-bold text-[var(--brutal-black)]"> Out of Stock </span>
                     </>
                   )}
                 </div>
               </div>
 
-              <p className="text-dark-2">
+              <p className="text-[var(--brutal-black)] font-medium">
                 {product.description || "Premium quality product with excellent features and durability. Perfect for everyday use."}
               </p>
 
               <div className="flex flex-wrap justify-between gap-5 mt-6 mb-7.5">
                 <div>
-                  <h4 className="font-semibold text-lg text-dark mb-3.5">
+                  <h4 className="font-black text-lg text-[var(--brutal-black)] mb-3.5">
                     Price
                   </h4>
 
                   <span className="flex items-center gap-2">
-                    <span className="font-semibold text-dark text-xl xl:text-heading-4">
+                    <span className="font-black text-[var(--brutal-black)] text-xl xl:text-heading-4">
                       ₹{product.discountedPrice.toLocaleString('en-IN')}
                     </span>
-                    <span className="font-medium text-dark-4 text-lg xl:text-2xl line-through">
+                    <span className="font-medium text-[var(--brutal-black)]/60 text-lg xl:text-2xl line-through">
                       ₹{product.price.toLocaleString('en-IN')}
                     </span>
                   </span>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-lg text-dark mb-3.5">
+                  <h4 className="font-black text-lg text-[var(--brutal-black)] mb-3.5">
                     Quantity
                   </h4>
 
@@ -359,7 +359,7 @@ const QuickViewModal = () => {
                     <button
                       onClick={() => quantity > 1 && setQuantity(quantity - 1)}
                       aria-label="button for remove product"
-                      className="flex items-center justify-center w-10 h-10 rounded-[5px] bg-gray-2 text-dark ease-out duration-200 hover:text-blue"
+                      className="flex items-center justify-center w-10 h-10 rounded-none border-2 border-[var(--brutal-black)] bg-[var(--brutal-bg)] text-[var(--brutal-black)] ease-out duration-200 hover:bg-[var(--brutal-yellow)] brutal-btn"
                       disabled={quantity < 0 && true}
                     >
                       <svg
@@ -380,7 +380,7 @@ const QuickViewModal = () => {
                     </button>
 
                     <span
-                      className="flex items-center justify-center w-20 h-10 rounded-[5px] border border-gray-4 bg-white font-medium text-dark"
+                      className="flex items-center justify-center w-20 h-10 rounded-none border-2 border-[var(--brutal-black)] bg-white font-black text-[var(--brutal-black)]"
                       x-text="quantity"
                     >
                       {quantity}
@@ -389,7 +389,7 @@ const QuickViewModal = () => {
                     <button
                       onClick={() => setQuantity(quantity + 1)}
                       aria-label="button for add product"
-                      className="flex items-center justify-center w-10 h-10 rounded-[5px] bg-gray-2 text-dark ease-out duration-200 hover:text-blue"
+                      className="flex items-center justify-center w-10 h-10 rounded-none border-2 border-[var(--brutal-black)] bg-[var(--brutal-bg)] text-[var(--brutal-black)] ease-out duration-200 hover:bg-[var(--brutal-yellow)] brutal-btn"
                     >
                       <svg
                         className="fill-current"
@@ -421,14 +421,13 @@ const QuickViewModal = () => {
                 <button
                   disabled={quantity === 0 && true}
                   onClick={() => handleAddToCart()}
-                  className={`inline-flex font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark
-                  `}
+                  className="inline-flex font-black text-[var(--brutal-black)] bg-[var(--brutal-yellow)] border-2 border-[var(--brutal-black)] py-3 px-7 rounded-none brutal-btn hover:bg-[var(--brutal-cyan)] disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   Add to Cart
                 </button>
 
                 <button
-                  className={`inline-flex items-center gap-2 font-medium text-white bg-dark py-3 px-6 rounded-md ease-out duration-200 hover:bg-opacity-95 `}
+                  className="inline-flex items-center gap-2 font-black text-[var(--brutal-black)] bg-white border-2 border-[var(--brutal-black)] py-3 px-6 rounded-none brutal-btn hover:bg-[var(--brutal-cyan)]"
                 >
                   <svg
                     className="fill-current"
