@@ -280,8 +280,8 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="font-black text-[var(--brutal-black)] mb-1">Email</h3>
-                  <a href={`mailto:${siteConfig.brand.email.general}`} className="text-[var(--brutal-black)] font-bold hover:bg-[var(--brutal-yellow)] hover:underline">
-                    {siteConfig.brand.email.general}
+                  <a href={`mailto:${siteConfig.brand.email}`} className="text-[var(--brutal-black)] font-bold hover:bg-[var(--brutal-yellow)] hover:underline">
+                    {siteConfig.brand.email}
                   </a>
                 </div>
               </div>

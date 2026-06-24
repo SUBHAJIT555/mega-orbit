@@ -179,7 +179,7 @@ const PrivacyPolicy = () => {
                 </p>
                 <div className="rounded-none border-2 border-[var(--brutal-black)] bg-[var(--brutal-bg)] p-5 text-[var(--brutal-black)] font-medium">
                   <p className="mb-2">
-                    <strong className="text-[var(--brutal-black)] font-black">Email:</strong> {siteConfig.brand.email.privacy}
+                    <strong className="text-[var(--brutal-black)] font-black">Email:</strong> {siteConfig.brand.email}
                   </p>
                   <p className="mb-2">
                     <strong className="text-[var(--brutal-black)] font-black">Phone:</strong> {siteConfig.brand.phone}

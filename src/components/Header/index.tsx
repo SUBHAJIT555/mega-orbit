@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 import { selectTotalPrice } from "@/redux/features/cart-slice";
 import { useCartModalContext } from "@/app/context/CartSidebarModalContext";
 import Image from "next/image";
+import Logo from "@/components/Common/Logo";
 import categoryData from "@/constants/categoryData";
 import { Product } from "@/types/product";
 
@@ -140,11 +141,7 @@ const Header = () => {
           className={`flex flex-col lg:flex-row gap-5 items-end lg:items-center xl:justify-between ease-out duration-200 ${stickyMenu ? "py-3" : "py-5"}`}
         >
           <div className="xl:w-auto flex-col sm:flex-row w-full flex sm:justify-between sm:items-center gap-5 sm:gap-10">
-            <Link className="flex-shrink-0 flex items-center gap-2" href="/">
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-[var(--brutal-black)]">
-                MEGA <span className="text-[var(--brutal-cyan)]">ORBIT</span>
-              </span>
-            </Link>
+            <Logo />
 
             <div className="max-w-[475px] w-full header-search" ref={searchRef}>
               <form onSubmit={handleSearchSubmit}>

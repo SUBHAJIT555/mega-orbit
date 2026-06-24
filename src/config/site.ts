@@ -2,12 +2,7 @@ export const siteConfig = {
   brand: {
     name: "Mega Orbit",
     domain: "mega-orbit.com",
-    email: {
-      support: "support@mega-orbit.com",
-      privacy: "privacy@mega-orbit.com",
-      legal: "legal@mega-orbit.com",
-      general: "info@mega-orbit.com",
-    },
+    email: "info@mega-orbit.com",
     phone: "+91 98765 43210",
     address: {
       street: "4517 Washington Ave.",

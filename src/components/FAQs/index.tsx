@@ -45,7 +45,7 @@ const FAQs = () => {
     },
     {
       question: "How do I contact Mega Orbit?",
-      answer: `Reach us by email at ${siteConfig.brand.email.general || siteConfig.brand.email.support}, phone at ${siteConfig.brand.phone}, or the contact form on our website. We're here to help during ${siteConfig.brand.businessHours}.`
+      answer: `Reach us by email at ${siteConfig.brand.email}, phone at ${siteConfig.brand.phone}, or the contact form on our website. We're here to help during ${siteConfig.brand.businessHours}.`
     },
     {
       question: "Do you have offers or discounts?",
@@ -133,7 +133,7 @@ const FAQs = () => {
                     Contact Us
                   </a>
                   <a
-                    href={`mailto:${siteConfig.brand.email.support}`}
+                    href={`mailto:${siteConfig.brand.email}`}
                     className="inline-flex items-center justify-center font-black text-[var(--brutal-black)] bg-white border-2 border-[var(--brutal-black)] py-2.5 px-6 rounded-none brutal-btn hover:bg-[var(--brutal-cyan)]"
                   >
                     Email Support

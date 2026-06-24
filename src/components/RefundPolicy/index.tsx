@@ -44,7 +44,7 @@ const RefundPolicy = () => {
                   To request a refund:
                 </p>
                 <ol className="list-decimal pl-6 mb-4 space-y-2 text-[var(--brutal-black)] font-medium">
-                  <li>Contact us by email at {siteConfig.brand.email.support} or phone at {siteConfig.brand.phone}</li>
+                  <li>Contact us by email at {siteConfig.brand.email} or phone at {siteConfig.brand.phone}</li>
                   <li>Provide your order number and reason for the refund</li>
                   <li>We will review your request and send you a Return Authorization (RA) number and return address</li>
                   <li>Pack the item(s) securely, ideally in the original packaging</li>
@@ -127,7 +127,7 @@ const RefundPolicy = () => {
                 <ul className="list-disc pl-6 mb-4 space-y-2 text-[var(--brutal-black)] font-medium">
                   <li>Check your bank account, UPI app, or card statement—refunds can take a few extra days to appear</li>
                   <li>Contact your bank or payment provider if needed</li>
-                  <li>If you still have not received the refund after that, contact us at {siteConfig.brand.email.support}</li>
+                  <li>If you still have not received the refund after that, contact us at {siteConfig.brand.email}</li>
                 </ul>
               </div>
 
@@ -140,7 +140,7 @@ const RefundPolicy = () => {
                 </p>
                 <div className="rounded-none border-2 border-[var(--brutal-black)] bg-[var(--brutal-bg)] p-5 text-[var(--brutal-black)] font-medium">
                   <p className="mb-2">
-                    <strong className="text-[var(--brutal-black)] font-black">Email:</strong> {siteConfig.brand.email.support}
+                    <strong className="text-[var(--brutal-black)] font-black">Email:</strong> {siteConfig.brand.email}
                   </p>
                   <p className="mb-2">
                     <strong className="text-[var(--brutal-black)] font-black">Phone:</strong> {siteConfig.brand.phone}

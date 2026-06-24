@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
+import Logo from "@/components/Common/Logo";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -12,15 +13,11 @@ const Footer = () => {
         <div className="flex flex-wrap xl:flex-nowrap gap-10 xl:gap-19 xl:justify-between pt-17.5 xl:pt-22.5 pb-10 xl:pb-15">
           <div className="max-w-[330px] w-full">
             <div className="mb-7.5">
-              <Link href="/" className="inline-block">
-                <span className="text-2xl font-black tracking-tight">
-                  MEGA <span className="text-[var(--brutal-cyan)]">ORBIT</span>
-                </span>
-              </Link>
+              <Logo textClassName="text-2xl font-black tracking-tight text-[var(--brutal-black)]" />
             </div>
             <p className="text-[var(--brutal-black)]/80 mb-7.5 text-sm leading-relaxed font-medium">
-              Mega Orbit is India&apos;s trusted store for electronics, books, stationery, and garments.
-              Honest prices, fast delivery. Shop at mega-orbit.com.
+              {siteConfig.brand.name} is India&apos;s trusted store for electronics, books, stationery, and garments.
+              Honest prices, fast delivery. Shop at {siteConfig.brand.domain}.
             </p>
           </div>
 
@@ -82,7 +79,7 @@ const Footer = () => {
         <div className="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
           <div className="flex gap-5 flex-wrap items-center justify-between">
             <p className="font-black text-sm text-[var(--brutal-black)]">
-              &copy; {year} MEGA ORBIT (mega-orbit.com). All rights reserved.
+              &copy; {year} {siteConfig.brand.name.toUpperCase()} ({siteConfig.brand.domain}). All rights reserved.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <p className="font-bold text-sm text-[var(--brutal-black)]">We Accept:</p>
